@@ -11,7 +11,7 @@
       type="text/css"
     />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap");
+      @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
       .manrope-font {
         font-family: "Manrope", sans-serif;
       }
@@ -21,7 +21,7 @@
     <!-- Navbar -->
     <div class="navbar">
       <div class="flex w-full items-center justify-between">
-        <!-- Portfolio Button (Left Side) -->
+        <!-- Logo Button (Left Side) -->
         <a class="btn btn-ghost text-xl">Ehsan</a>
 
         <!-- Dropdown Menu for Small Devices -->
@@ -76,29 +76,26 @@
     </div>
 
     <!-- Banner Section -->
-    <div class="hero">
+    <div class="hero animate-fadeIn">
       <div class="hero-content flex-col lg:flex-row-reverse">
         <img
           src="./hero.png"
-          class=" rounded-lg shadow-2xl"
+          class="rounded-lg shadow-2xl animate-slideInLeft"
         />
         <div class="text-center lg:text-left">
-          <p class="text-gray-500">Web Developer</p>
-          <h1 class="text-5xl font-bold">
+          <p class="text-gray-500 animate-fadeIn animation-delay-200">Web Developer</p>
+          <h1 class="text-5xl font-bold animate-slideInRight animation-delay-300">
             HI! THIS IS <br />
             <span class="text-yellow-400">SHAH EHSAN</span>
           </h1>
-          <p class="py-6">
-            As a web designer with four years of experience, I specialize in
-            creating visually appealing and user-friendly websites. My expertise
-            includes responsive design, UI/UX principles, and collaborating with
-            clients to bring their vision to life.
+          <p class="py-6 animate-fadeIn animation-delay-400">
+            As a web designer with four years of experience, I specialize in creating visually appealing and user-friendly websites. My expertise includes responsive design, UI/UX principles, and collaborating with clients to bring their vision to life.
           </p>
           <div class="flex flex-col sm:flex-row gap-4">
-            <button class="items-center flex gap-2 bg-yellow-500 rounded-full p-2">
-              Lets Chat
+            <button class="items-center flex gap-2 bg-yellow-400 rounded-full p-2 animate-buttonHover">
+              Lets Connect
             </button>
-            <button class="items-center flex gap-2">
+            <button class="items-center flex gap-2 animate-buttonHover">
               View Portfolios
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -119,6 +116,82 @@
         </div>
       </div>
     </div>
+    
+    <style>
+      /* Keyframes for animations */
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    
+      @keyframes slideInLeft {
+        0% {
+          transform: translateX(-50%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    
+      @keyframes slideInRight {
+        0% {
+          transform: translateX(50%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+    
+      @keyframes buttonHover {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(1.1);
+        }
+      }
+    
+      /* Apply fade-in animation */
+      .animate-fadeIn {
+        animation: fadeIn 1.5s ease-out;
+      }
+    
+      /* Apply slide-in animations for text and image */
+      .animate-slideInLeft {
+        animation: slideInLeft 1s ease-out;
+      }
+    
+      .animate-slideInRight {
+        animation: slideInRight 1s ease-out;
+      }
+    
+      /* Apply delay for elements */
+      .animation-delay-200 {
+        animation-delay: 0.2s;
+      }
+    
+      .animation-delay-300 {
+        animation-delay: 0.3s;
+      }
+    
+      .animation-delay-400 {
+        animation-delay: 0.4s;
+      }
+    
+      /* Button hover effect */
+      .animate-buttonHover:hover {
+        animation: buttonHover 0.3s ease-in-out forwards;
+      }
+    </style>
+    
 
     <!-- Specialties Section -->
     <div class="text-center mb-20">
